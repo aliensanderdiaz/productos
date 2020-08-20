@@ -1,0 +1,2908 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css&amp;skin=sunburst"></script>
+
+    <title>Productos</title>
+  </head>
+  <body>
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Referencia</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo">
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+        </tbody>
+      </table>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script>
+        const productos = [
+    {
+        "referencia": "31160027",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora clásica con motor reversible BEST02-R01",
+        "_id": "5ccdeeb623372d01783e2ea5",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 158000
+    },
+    {
+        "referencia": "BEST02E01013",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora clásica cromada con motor reversible",
+        "_id": "5ccdee5923372d01783e2ea4",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 158000
+    },
+    {
+        "referencia": "BVSTEM6601S013",
+        "categoria": "Cafeteras y hervidoras",
+        "nombre": "Cafetera automática para espresso, latte y cappuccino PrimaLatte plateada",
+        "_id": "5ccdedb923372d01783e2ea3",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 429000
+    },
+    {
+        "referencia": "299894534",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador Pedestal MAXIFlow Gris 18″",
+        "_id": "5cce08c123372d01783e2eab",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 77936
+    },
+    {
+        "referencia": "299894535",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador pedestal MAXIFLOW 18″ Negro",
+        "_id": "5cce079e23372d01783e2eaa",
+        "etiqueta": "Producto",
+        "cantidad": 10,
+        "precio": 74017.8
+    },
+    {
+        "referencia": "299894533",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador pared MAXIFLOW 18″",
+        "_id": "5cce06d623372d01783e2ea9",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 62756.16
+    },
+    {
+        "referencia": "299894096",
+        "categoria": "Ollas",
+        "nombre": "Juego de calderos 5 ollas 32/40 con tapa",
+        "_id": "5cba823b62f65623a477a2c1",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 184873.42
+    },
+    {
+        "referencia": "299894294",
+        "categoria": "Ollas",
+        "nombre": "Juego de Ollas latinas NEGRAS de 18 a 26 litros",
+        "_id": "5cba392262f65623a477a294",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 62229
+    },
+    {
+        "referencia": "299893958",
+        "categoria": "Ollas",
+        "nombre": "Juego de ollas latina 18/26 Azul turqueza",
+        "_id": "5cba82c462f65623a477a2c2",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 67954.07
+    },
+    {
+        "referencia": "728994892",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared 16\"",
+        "_id": "5bb017dc0f50942f28a35117",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 52083.33
+    },
+    {
+        "referencia": "299893183",
+        "categoria": "Baterías de cocina",
+        "nombre": "BATERÍA ACERO INOXIDABLE 7 piezas",
+        "_id": "5cce0f6823372d01783e2eac",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 116900
+    },
+    {
+        "referencia": "VARIOS",
+        "categoria": "Cocina y Mesa",
+        "nombre": "Varios",
+        "_id": "5bae9bdb2f84dd8fe690977d",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 166000
+    },
+    {
+        "referencia": "BR-38",
+        "categoria": "Ollas",
+        "nombre": "Olla 40x30 38 litros",
+        "_id": "5d081e095ca8ea067137a860",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 52521
+    },
+    {
+        "referencia": "720535",
+        "categoria": "Ollas",
+        "nombre": "OLLA 40X40",
+        "_id": "5d081f565ca8ea067137a863",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 58824
+    },
+    {
+        "referencia": "BR-44",
+        "categoria": "Ollas",
+        "nombre": "Olla 50x40 78 Litros",
+        "_id": "5d081e6a5ca8ea067137a861",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 94118
+    },
+    {
+        "referencia": "BR-45",
+        "categoria": "Ollas",
+        "nombre": "Olla 50x50 98 litros",
+        "_id": "5d081ec45ca8ea067137a862",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 104202
+    },
+    {
+        "referencia": "KJ0168",
+        "categoria": "Techo",
+        "nombre": "Ventilador de techo orbital 18\" Blanco",
+        "_id": "5c9aeeca8dbac8336465f953",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 92437
+    },
+    {
+        "referencia": "KJ0355",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared base metalica 18\" Blanco",
+        "_id": "5c9aec0d8dbac8336465f951",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 66387
+    },
+    {
+        "referencia": "KJ0191",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared base metalica 18\" Negro",
+        "_id": "5c9aeb7c8dbac8336465f950",
+        "etiqueta": "Producto",
+        "cantidad": 7,
+        "precio": 66387
+    },
+    {
+        "referencia": "KJ0299",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador pedestal Gris 18\"",
+        "_id": "5c9ae91d8dbac8336465f94f",
+        "etiqueta": "Producto",
+        "cantidad": 9,
+        "precio": 68067
+    },
+    {
+        "referencia": "KJ0305",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador pedestal Negro 18\"",
+        "_id": "5c9ae85a8dbac8336465f94e",
+        "etiqueta": "Producto",
+        "cantidad": 7,
+        "precio": 68067
+    },
+    {
+        "referencia": "VE6735I0",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador Turbo Silence Maxx Pared Negro",
+        "_id": "5bb59657288c8a087c71ad8b",
+        "etiqueta": "Producto",
+        "cantidad": 9,
+        "precio": 114838
+    },
+    {
+        "referencia": "L83680",
+        "categoria": "Exprimidores de cítricos",
+        "nombre": "EXPRIMIDOR INOX",
+        "_id": "5cc0d6dc27e58d4c581aa4db",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 74928.57
+    },
+    {
+        "referencia": "L87312",
+        "categoria": "Sandwicheras",
+        "nombre": "Sandwichera Panini grill",
+        "_id": "5d0840345ca8ea067137a86f",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 73497.86
+    },
+    {
+        "referencia": "L95900",
+        "categoria": "Planchas de ropa",
+        "nombre": "Plancha a vapor",
+        "_id": "5cbb813083d4592178c5706d",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 51357.14
+    },
+    {
+        "referencia": "BLSTVBP00013",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora Xpert Series con vaso Tritan",
+        "_id": "5cafaca213e53c31d8cf9339",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 388500
+    },
+    {
+        "referencia": "FPSTRM2523R013",
+        "categoria": "Batidoras",
+        "nombre": "Batidora fuente de soda roja",
+        "_id": "5cafa63a13e53c31d8cf9333",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 383400
+    },
+    {
+        "referencia": "PH12502",
+        "categoria": "Mesas de planchar",
+        "nombre": "Mesa de planchar Multiuso Cajón",
+        "_id": "5d0851285ca8ea067137a872",
+        "etiqueta": "Repuesto",
+        "cantidad": 2,
+        "precio": 57558
+    },
+    {
+        "referencia": "728994891",
+        "categoria": "Techo",
+        "nombre": "Ventilador de techo orbital 16\"",
+        "_id": "5c991b3efd6729326c1fe901",
+        "etiqueta": "Producto",
+        "cantidad": 8,
+        "precio": 62620.8
+    },
+    {
+        "referencia": "CKSTAF7601-013",
+        "categoria": "Freidora",
+        "nombre": "Freidora de aire de 3.2 Litros",
+        "_id": "5d085d2c5ca8ea067137a878",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 242813
+    },
+    {
+        "referencia": "003168012000",
+        "categoria": "Extractores de jugos",
+        "nombre": "Extractor de jugos serie profesional",
+        "_id": "5ca2ee3a13571f2bd4a73fbc",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 210000
+    },
+    {
+        "referencia": "3320013000",
+        "categoria": "Procesadores de alimentos",
+        "nombre": "Mini picadora de alimentos 3 tazas negro",
+        "_id": "5caf566c9fd49a230c002cf4",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 71000
+    },
+    {
+        "referencia": "VE6730I0",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador Turbo Silence Maxx Pared Blanco",
+        "_id": "5bb01ede0f50942f28a35125",
+        "etiqueta": "Producto",
+        "cantidad": 7,
+        "precio": 114838
+    },
+    {
+        "referencia": "VE7325I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 3 en 1 Comfort Maxx Negro 18\"",
+        "_id": "5bb0397c0f50942f28a35133",
+        "etiqueta": "Producto",
+        "cantidad": 7,
+        "precio": 119164
+    },
+    {
+        "referencia": "CG120W012000",
+        "categoria": "Sandwicheras",
+        "nombre": "Plancha Sandwichera 3 en 1",
+        "_id": "5cafad5513e53c31d8cf933a",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 117647
+    },
+    {
+        "referencia": "BRLY07Z00013",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora reversible negra",
+        "_id": "5caf534d9fd49a230c002cf1",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 134453.78
+    },
+    {
+        "referencia": "BLSTAC3090011",
+        "categoria": "Cuchillas",
+        "nombre": "Cuchilla Xpert Series BLSTAC3090",
+        "_id": "5d0864d65ca8ea067137a87f",
+        "etiqueta": "Repuesto",
+        "cantidad": 7,
+        "precio": 50424
+    },
+    {
+        "referencia": "FPSTJU4176-013",
+        "categoria": "Exprimidores de cítricos",
+        "nombre": "Exprimidor de cítricos eléctrico negro",
+        "_id": "5d0865d15ca8ea067137a880",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 75630
+    },
+    {
+        "referencia": "VE7735I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 3 en 1 Turbo Silence Maxx Negro 18\"",
+        "_id": "5bb005e90f50942f28a3510e",
+        "etiqueta": "Producto",
+        "cantidad": 8,
+        "precio": 132505
+    },
+    {
+        "referencia": "7705946392471",
+        "categoria": "Camaras de seguridad",
+        "nombre": "Cámara HD Interior Dia/Noche 360°",
+        "_id": "5d086a1d5ca8ea067137a883",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 159616
+    },
+    {
+        "referencia": "7705946392488",
+        "categoria": "Camaras de seguridad",
+        "nombre": "Cámara HD Exteriores Dia/Noche 360° ",
+        "_id": "5d086be95ca8ea067137a884",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 233323
+    },
+    {
+        "referencia": "UN55RU7100",
+        "categoria": "Televisores",
+        "nombre": "Televisor UHD 4K - 138Cm - 55\"",
+        "_id": "5d086d655ca8ea067137a886",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 2688992
+    },
+    {
+        "referencia": "K-CM500K",
+        "categoria": "Cafeteras y hervidoras",
+        "nombre": "Cafetera 12 Tazas Kalley",
+        "_id": "5c9add4e8dbac8336465f945",
+        "etiqueta": "Producto",
+        "cantidad": 7,
+        "precio": 54353
+    },
+    {
+        "referencia": "K-VPAR16C",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared con control remoto",
+        "_id": "5caad17b9db3f429fc0593a9",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 96582
+    },
+    {
+        "referencia": "K-RCW14",
+        "categoria": "Ollas Arroceras",
+        "nombre": "OLLAS ARROCERA 1.4 Litros",
+        "_id": "5d0872105ca8ea067137a88a",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 50831
+    },
+    {
+        "referencia": "K-RCW18",
+        "categoria": "Ollas Arroceras",
+        "nombre": "Olla Arrocera 1.8 Litros",
+        "_id": "5d08729c5ca8ea067137a88b",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 55604
+    },
+    {
+        "referencia": "K-PA250",
+        "categoria": "Procesadores de alimentos",
+        "nombre": "Procesador de Alimentos",
+        "_id": "5d0876bc5ca8ea067137a88f",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 62766
+    },
+    {
+        "referencia": "K-MW09G",
+        "categoria": "Hornos",
+        "nombre": "Hornos microondas 25 Litros Gris",
+        "_id": "5caad2ca9db3f429fc0593aa",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 228365
+    },
+    {
+        "referencia": "K-MW07N",
+        "categoria": "Hornos",
+        "nombre": "Hornos microondas 20 Litros Negro",
+        "_id": "5caad34a9db3f429fc0593ab",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 162624
+    },
+    {
+        "referencia": "K-VC12AN",
+        "categoria": "Aspiradoras",
+        "nombre": "Aspiradora",
+        "_id": "5cbcbd674c958536d4255d59",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 101416
+    },
+    {
+        "referencia": "K-VAP26P",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador pedestal 26\" Negro",
+        "_id": "5cbde39b83107e2a5c623c9b",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 242908
+    },
+    {
+        "referencia": "K-VAP26W",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de Pared KALLEY K-VAP26W",
+        "_id": "5cbde3de83107e2a5c623c9c",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 212141
+    },
+    {
+        "referencia": "K-V31N02",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 3 en 1 Negro 18\"",
+        "_id": "5ca2e75513571f2bd4a73fb5",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 126267
+    },
+    {
+        "referencia": "K-JE750",
+        "categoria": "Extractores de jugos",
+        "nombre": "Extractor de jugos 750w",
+        "_id": "5cbcc5734c958536d4255d5a",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 136898
+    },
+    {
+        "referencia": "K-VC21N",
+        "categoria": "Aspiradoras",
+        "nombre": "Aspiradora 2 en 1 MAGIC DUO",
+        "_id": "5d0878295ca8ea067137a890",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 100208
+    },
+    {
+        "referencia": "K-TF60N",
+        "categoria": "Torre",
+        "nombre": "VENTILADOR DE TORRE K-TF60N",
+        "_id": "5cbde6d883107e2a5c623c9d",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 88258
+    },
+    {
+        "referencia": "K-V31B02",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 3 en 1 Blanco",
+        "_id": "5d087a2d5ca8ea067137a892",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 124685
+    },
+    {
+        "referencia": "2074674",
+        "categoria": "Torre",
+        "nombre": "Ventilador de torre",
+        "_id": "5d0ad7d93bc793087ae8795d",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 180900
+    },
+    {
+        "referencia": "002532013000",
+        "categoria": "Batidoras",
+        "nombre": "Batidora de mano blanca de 6 velocidades 250w",
+        "_id": "5ca2eaae13571f2bd4a73fb6",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 66900
+    },
+    {
+        "referencia": "FPSTHS2611013",
+        "categoria": "Batidoras",
+        "nombre": "Batidora de mano y pedestal blanca con tazón de vidrio",
+        "_id": "5ca2eec413571f2bd4a73fbd",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 139000
+    },
+    {
+        "referencia": "KJ0173",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared base plástica 18\" blanco",
+        "_id": "5d0ae8e43bc793087ae87969",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 66387
+    },
+    {
+        "referencia": "KJ0179",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared base plástica 18\" Negro",
+        "_id": "5cca2129f4e6e61cf4dd497e",
+        "etiqueta": "Producto",
+        "cantidad": 7,
+        "precio": 66387
+    },
+    {
+        "referencia": "KJ0171",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador Industrial 24\" Base tripode",
+        "_id": "5d0ae8353bc793087ae87968",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 252101
+    },
+    {
+        "referencia": "VE7730I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 3 en 1 Turbo Silence Maxx Blanco 18\"",
+        "_id": "5bb001ce0f50942f28a3510d",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 132505
+    },
+    {
+        "referencia": "VE3141I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 2 en 1 Air Protec Maxx Negro 16\"",
+        "_id": "5cba57bc62f65623a477a2a3",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 73179
+    },
+    {
+        "referencia": "4126R3S013",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora clásica Roja",
+        "_id": "5d0b123b3bc793087ae87976",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 111956
+    },
+    {
+        "referencia": "L89270",
+        "categoria": "Procesadores de alimentos",
+        "nombre": "Procesador de alimentos negro 7tz",
+        "_id": "5cbc87e64c958536d4255d44",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 59071.43
+    },
+    {
+        "referencia": "L89016",
+        "categoria": "Ollas Arroceras",
+        "nombre": "OLLA ARROCERA NEGRA 5 TAZAS PLUS (1 LIBRA)",
+        "_id": "5cc0934427e58d4c581aa47d",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 52642.86
+    },
+    {
+        "referencia": "L89807",
+        "categoria": "Ollas Arroceras",
+        "nombre": "OLLA ARROCERA NEGRA 7 TAZAS (1.5 LIBRAS)",
+        "_id": "5cc0918527e58d4c581aa47c",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 52152.98
+    },
+    {
+        "referencia": "L89830",
+        "categoria": "Ollas Arroceras",
+        "nombre": "OLLA ARROCERA NEGRA 10 TAZAS (2 LIBRAS)",
+        "_id": "5cc08d3c27e58d4c581aa477",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 50898.85
+    },
+    {
+        "referencia": "0503516",
+        "categoria": "Estufas con Horno",
+        "nombre": "Estufa con horno Abba 4 puestos Gris Acero Inox Quemador aluminio con tapa de vidrio GN ",
+        "_id": "5d0b10b13bc793087ae87975",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 375069
+    },
+    {
+        "referencia": "0501183",
+        "categoria": "Estufas con Horno",
+        "nombre": " Estufa con horno Abba 4 puestos Negra Acero Inox Quemador aluminio con tapa de vidrio GN ",
+        "_id": "5cce56cfd4dd072c88a25dd2",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 375069
+    },
+    {
+        "referencia": "0503724",
+        "categoria": "Estufas con Horno",
+        "nombre": "Estufa con horno Abba 4 puestos Gris Acero Inox Quemador aluminio con torre y Gratinador GN",
+        "_id": "5cc7033717d7cc2964f852eb",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 425480
+    },
+    {
+        "referencia": "0501024",
+        "categoria": "Estufas con Horno",
+        "nombre": "Estufa con horno Abba 4 puestos Negra Acero Inox Quemador aluminio con torre y Gratinador GN",
+        "_id": "5d0b0ef73bc793087ae87974",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 401580
+    },
+    {
+        "referencia": "0181500",
+        "categoria": "Planchas asadoras",
+        "nombre": "Plancha doble antiadherente para asar multiproposito",
+        "_id": "5cc321de46892122404f439a",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 54147
+    },
+    {
+        "referencia": "K-VM40N",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "VENTILADOR DE MESA",
+        "_id": "5d372de890aa1a0851f6f85d",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 55292
+    },
+    {
+        "referencia": "BR-39",
+        "categoria": "Ollas",
+        "nombre": "Olla 40x40 50 Litros",
+        "_id": "5d410048f54314097de005f7",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 58824
+    },
+    {
+        "referencia": "BR-00-00",
+        "categoria": "Ollas",
+        "nombre": "Juego de Ollas Buffet brilladas de 18 a 26",
+        "_id": "5d410510f54314097de005f9",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 50840
+    },
+    {
+        "referencia": "BR-01",
+        "categoria": "Ollas",
+        "nombre": "Juego de calderos de 30 a 36",
+        "_id": "5d4105f9f54314097de005fa",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 85714
+    },
+    {
+        "referencia": "720689",
+        "categoria": "Ollas",
+        "nombre": "Olla 50x20",
+        "_id": "5d41b8e1b9c4720719b59028",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 79832
+    },
+    {
+        "referencia": "720542",
+        "categoria": "Ollas",
+        "nombre": "Olla 50x30",
+        "_id": "5d41b937b9c4720719b59029",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 88235
+    },
+    {
+        "referencia": "720559",
+        "categoria": "Ollas",
+        "nombre": "Olla 50x40",
+        "_id": "5d41b986b9c4720719b5902a",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 101681
+    },
+    {
+        "referencia": "72####",
+        "categoria": "Ollas",
+        "nombre": "Juego de ollas 26/32",
+        "_id": "5d41ba84b9c4720719b5902b",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 78992
+    },
+    {
+        "referencia": "VL124A040116",
+        "categoria": "Vajillas",
+        "nombre": "Vajilla Bambú",
+        "_id": "5cc113edadc24e1e1007e01e",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 86703
+    },
+    {
+        "referencia": "VL143C040116",
+        "categoria": "Vajillas",
+        "nombre": "Vajilla Barboleta",
+        "_id": "5cba5a8162f65623a477a2a7",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 86703
+    },
+    {
+        "referencia": "VL125A040116",
+        "categoria": "Vajillas",
+        "nombre": "Vajilla Mediterranea",
+        "_id": "5d37326090aa1a0851f6f860",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 86703
+    },
+    {
+        "referencia": "299893495",
+        "categoria": "Hornos",
+        "nombre": "HORNO TOSTADOR CON ROSTIZADOR 18 Ltrs",
+        "_id": "5cba35d562f65623a477a293",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 125622.6
+    },
+    {
+        "referencia": "L75252",
+        "categoria": "Motores",
+        "nombre": "Motor",
+        "_id": "5cb50193290ece497ce4d213",
+        "etiqueta": "Repuesto",
+        "cantidad": 2,
+        "precio": 52795.59
+    },
+    {
+        "referencia": "L75518",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador Pedestal Ultra Power Negro 18\" (antiguo)",
+        "_id": "5c9b180f8dbac8336465f973",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 86174.55
+    },
+    {
+        "referencia": "3072036095",
+        "categoria": "Gasolina",
+        "nombre": "Estufa a gasolina Continental 2 puestos",
+        "_id": "5bb04c8a0f50942f28a35144",
+        "etiqueta": "Producto",
+        "cantidad": 8,
+        "precio": 90183
+    },
+    {
+        "referencia": "L75310",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador Universal pared 18\" Negro",
+        "_id": "5bb2cf7b9f2f6126b834e604",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 109946.07
+    },
+    {
+        "referencia": "4655",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora clásica cromada Oster de 3 velocidades",
+        "_id": "5c8ed93445094221f8026719",
+        "etiqueta": "Producto",
+        "cantidad": 10,
+        "precio": 117647
+    },
+    {
+        "referencia": "4134R3S013",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora clásica Azul 3 velocidades 4134",
+        "_id": "5d41ca24b9c4720719b59032",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 102132.95
+    },
+    {
+        "referencia": "7705946250337",
+        "categoria": "Soportes para TV",
+        "nombre": "Soporte para TV plano Fijo de 37\"a 70\" Negro",
+        "_id": "5d4250f5c947bd089bec40ab",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 65855
+    },
+    {
+        "referencia": "299894102",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador pedestal Negro 16\" Aspa color",
+        "_id": "5ca16db3134e1033ccb7c758",
+        "etiqueta": "Producto",
+        "cantidad": 9,
+        "precio": 54831.68
+    },
+    {
+        "referencia": "VL139A040116",
+        "categoria": "Vajillas",
+        "nombre": "Vajilla Noa",
+        "_id": "5cc11453adc24e1e1007e01f",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 81720
+    },
+    {
+        "referencia": "VL169C040116",
+        "categoria": "Vajillas",
+        "nombre": "Vajilla Tulip",
+        "_id": "5cba584a62f65623a477a2a4",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 52222
+    },
+    {
+        "referencia": "VL136B040116",
+        "categoria": "Vajillas",
+        "nombre": "Vajilla Maia",
+        "_id": "5d4b33aab736ac090a3c8dd6",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 52222
+    },
+    {
+        "referencia": "VE7710I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 2 en 1 Turbo Silence Compact Negro-Gris 14\"",
+        "_id": "5bb033500f50942f28a3512a",
+        "etiqueta": "Producto",
+        "cantidad": 7,
+        "precio": 105505
+    },
+    {
+        "referencia": "VE7712I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 2 en 1 Turbo Silence Compact Negro-Azul 14\"",
+        "_id": "5bb034c30f50942f28a3512b",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 102473
+    },
+    {
+        "referencia": "VE7719I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 2 en 1 Turbo Silence Compact Negro-Naranja 14\"",
+        "_id": "5bb82697b06abc0c781dd0a5",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 102473
+    },
+    {
+        "referencia": "VE7711I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 2 en 1 Turbo Silence Compact Blanco 14\"",
+        "_id": "5bb81a97b06abc0c781dd0a0",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 102473
+    },
+    {
+        "referencia": "SM2PEE-MOT",
+        "categoria": "Estufas electricas",
+        "nombre": "Estufa Sueco Electrica 2 puestos moteada ",
+        "_id": "5c98028b48a18330d8bc9941",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 61630
+    },
+    {
+        "referencia": "456702",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa Atlantis 4 puestos Negra Acero Inoxidable QL con torre GP",
+        "_id": "5cbcff9d2fdde13404be62a6",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 108107
+    },
+    {
+        "referencia": "456703",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa Atlantis 4 puestos Negra Acero Inoxidable QL con torre GN",
+        "_id": "5c97fdbc48a18330d8bc993d",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 108107
+    },
+    {
+        "referencia": "414702",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa titanium Acero Inox con torre negra GN",
+        "_id": "5cce427982f68705d48a3429",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 121359
+    },
+    {
+        "referencia": "414703",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa Titanium Acero Inox con torre negra GP",
+        "_id": "5cce438382f68705d48a342a",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 121359
+    },
+    {
+        "referencia": "2074937",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de piso 54 cm",
+        "_id": "5d4b9b13b736ac090a3c8ddb",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 108900
+    },
+    {
+        "referencia": "3024224954",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 Puestos Torre Acero Inox.Full Acero Inox.Gris Optimus",
+        "_id": "5cba6fbe62f65623a477a2b6",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 133263
+    },
+    {
+        "referencia": "3024124947",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 Puestos Torre Acero Inox.Full Acero Inox.Negro Optimus",
+        "_id": "5cba6f5062f65623a477a2b5",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 133263
+    },
+    {
+        "referencia": "3024124282",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negro Esmaltada QA con torre GP",
+        "_id": "5d67ed81853fbe08f53f9f7e",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 126728
+    },
+    {
+        "referencia": "3024224411",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Esmaltada QA con torre GP",
+        "_id": "5d67eff5853fbe08f53f9f7f",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 126728
+    },
+    {
+        "referencia": "3071036019",
+        "categoria": "Gasolina",
+        "nombre": "Estufa a gasolina Continental 1 puesto",
+        "_id": "5bb04bf50f50942f28a35143",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 78587
+    },
+    {
+        "referencia": "VE3141I01",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 2 en 1 Air Protec Maxx Negro - Rojo 16\"",
+        "_id": "5d5cca42dd51b379baed8bab",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 95901
+    },
+    {
+        "referencia": "L76003",
+        "categoria": "Calderos",
+        "nombre": "Caldero con tapa fundido de 50 cm\t",
+        "_id": "5cbcd45e4c958536d4255d61",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 75166.39
+    },
+    {
+        "referencia": "L24602",
+        "categoria": "Ollas a Presión",
+        "nombre": "Olla a presión Esencial CI 6L",
+        "_id": "5d5cd241dd51b379baed8bae",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 53782
+    },
+    {
+        "referencia": "L89827",
+        "categoria": "Ollas Arroceras",
+        "nombre": "OLLA ARROCERA PLUS GRIS 7 TZ",
+        "_id": "5cc08f0c27e58d4c581aa479",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 52152.98
+    },
+    {
+        "referencia": "5823500",
+        "categoria": "Baterías de cocina",
+        "nombre": "Batería 6 Piezas Antiadherente Triforce",
+        "_id": "5d66f02d853fbe08f53f9f2c",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 100069
+    },
+    {
+        "referencia": "0501203",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Acero Inox QA con torre GN",
+        "_id": "5cc7056b17d7cc2964f852ec",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 142740
+    },
+    {
+        "referencia": "0501207",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Acero Inox QA con torre GP",
+        "_id": "5cc7063617d7cc2964f852ed",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 142740
+    },
+    {
+        "referencia": "0501214",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Acero Inox QA con torre GP",
+        "_id": "5cff1e00b794dc05800d8a80",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 142740
+    },
+    {
+        "referencia": "0501215",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Acero Inox QA con torre GN",
+        "_id": "5ce723c27bc2d1055e0b1613",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 127785
+    },
+    {
+        "referencia": "14401273",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Acero Inox QL con torre GP",
+        "_id": "5cff1d51b794dc05800d8a7f",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 124428
+    },
+    {
+        "referencia": "14401275",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Acero Inox QL con torre GN",
+        "_id": "5cff21efb794dc05800d8a83",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 115690
+    },
+    {
+        "referencia": "14401276",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Acero Inox QL con torre GN",
+        "_id": "5cff20a3b794dc05800d8a82",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 115690
+    },
+    {
+        "referencia": "03414",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Acero Inox QL con torre GN EE",
+        "_id": "5d66f52a853fbe08f53f9f2e",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 140630
+    },
+    {
+        "referencia": "299893832",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared MaxiFLOW 16\" Blanco",
+        "_id": "5c9911f1fd6729326c1fe8ff",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 57974.75
+    },
+    {
+        "referencia": "299892747",
+        "categoria": "Batidoras",
+        "nombre": "Batidora Multi-mixer",
+        "_id": "5d66fb82853fbe08f53f9f32",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 88090
+    },
+    {
+        "referencia": "299894920",
+        "categoria": "Hornos",
+        "nombre": "Horno Tostador Cobre – 21 litros",
+        "_id": "5d66fc70853fbe08f53f9f33",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 138866
+    },
+    {
+        "referencia": "K-VP20HS",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador industrial Kalley Alta Potencia K-VP20HS",
+        "_id": "5c98fcc3fd6729326c1fe8ef",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 144054
+    },
+    {
+        "referencia": "K-VORB16",
+        "categoria": "Techo",
+        "nombre": "Ventilador Orbital 16\"",
+        "_id": "5d6700e0853fbe08f53f9f35",
+        "etiqueta": "Producto",
+        "cantidad": 9,
+        "precio": 80050
+    },
+    {
+        "referencia": "K-TF60",
+        "categoria": "Torre",
+        "nombre": "Ventilador de torre",
+        "_id": "5cbcbca94c958536d4255d57",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 88962
+    },
+    {
+        "referencia": "K-TF45",
+        "categoria": "Torre",
+        "nombre": "Ventilador Torre",
+        "_id": "5d6702b0853fbe08f53f9f36",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 131843
+    },
+    {
+        "referencia": "FPSTJE316W013",
+        "categoria": "Extractores de jugos",
+        "nombre": "Extractor de jugos",
+        "_id": "5d670536853fbe08f53f9f38",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 90750
+    },
+    {
+        "referencia": "6901443266760",
+        "categoria": "Smartphone",
+        "nombre": "Smartphone 2019 Doble Sim 4G Negro",
+        "_id": "5d6725f5853fbe08f53f9f4a",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 548687.39
+    },
+    {
+        "referencia": "7704353030198",
+        "categoria": "Estufas electricas",
+        "nombre": "Estufa Eléctrica 2 Puestos",
+        "_id": "5ca1a53b134e1033ccb7c798",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 90994
+    },
+    {
+        "referencia": "0501040",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Acero Inox QA con torre GN",
+        "_id": "5c93274c3d38870e60a97277",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 135937
+    },
+    {
+        "referencia": "0501640",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Acero Inox QA con torre GP",
+        "_id": "5cb3f5f233e7d62d9ce844f6",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 135937
+    },
+    {
+        "referencia": "0503740",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Acero Inox QA con torre GN",
+        "_id": "5c9320dd3d38870e60a97271",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 135937
+    },
+    {
+        "referencia": "0501041",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Esmaltada QA con torre GN",
+        "_id": "5cb3f39d33e7d62d9ce844f4",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 123009
+    },
+    {
+        "referencia": "0501209",
+        "categoria": "Estufas electricas",
+        "nombre": "Estufa electrica Abba 2 puestos",
+        "_id": "5c92170cb918ea1d9ccc9659",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 70561
+    },
+    {
+        "referencia": "14403304",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Esmaltada QL con torre GP",
+        "_id": "5c93097d3d38870e60a9726b",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 107201
+    },
+    {
+        "referencia": "0503741",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Esmaltada QA con torre GN",
+        "_id": "5cbc78ec4c958536d4255d35",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 123009
+    },
+    {
+        "referencia": "010343943735",
+        "categoria": "Impresoras",
+        "nombre": "Multifuncional EPSON Ecotank L3110 Negro",
+        "_id": "5d675d65853fbe08f53f9f63",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 305420.16
+    },
+    {
+        "referencia": "1173",
+        "categoria": "Ollas",
+        "nombre": "Olla esmaltada con tapa 30 cm",
+        "_id": "5d6764d3853fbe08f53f9f67",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 81540
+    },
+    {
+        "referencia": "1128",
+        "categoria": "Ollas",
+        "nombre": "Olla esmaltada con tapa 24 cm",
+        "_id": "5d67657f853fbe08f53f9f68",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 50716
+    },
+    {
+        "referencia": "299893271",
+        "categoria": "Ollas Arroceras",
+        "nombre": "Olla arrocera 2 Libras Gris",
+        "_id": "5ca2cabb5c251101e8a7fdf6",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 52100
+    },
+    {
+        "referencia": "BLST3AR2G013",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora Xpert Series roja",
+        "_id": "5ca2ef8f13571f2bd4a73fbe",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 336134.6
+    },
+    {
+        "referencia": "NF-50",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador Dkasa Tornado Giratorio piso 20\"",
+        "_id": "5bb026fc0f50942f28a35129",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 152825
+    },
+    {
+        "referencia": "600418",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador pedestal control remoto Blanco 18\"",
+        "_id": "5c97e00648a18330d8bc992c",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 84000
+    },
+    {
+        "referencia": "600419",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador pedestal 18\" Negro con control",
+        "_id": "5c97e08348a18330d8bc992d",
+        "etiqueta": "Producto",
+        "cantidad": 7,
+        "precio": 84000
+    },
+    {
+        "referencia": "311-S-GP",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 Puestos Gas sin torre - GP",
+        "_id": "5c98055748a18330d8bc9943",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 78247
+    },
+    {
+        "referencia": "311-S-GN",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 Puestos Gas sin torre - GN",
+        "_id": "5c9805ff48a18330d8bc9944",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 78247
+    },
+    {
+        "referencia": "3012022028",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 2 Puestos Esmaltada QL GP Moteada",
+        "_id": "5cba6eae62f65623a477a2b4",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 56802
+    },
+    {
+        "referencia": "3012012011",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 2 Puestos Esmaltada QL GN Moteada",
+        "_id": "5d677a44853fbe08f53f9f7a",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 56802
+    },
+    {
+        "referencia": "600508",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared Shimasu 18\" Blanco con control",
+        "_id": "5c97b5e048a18330d8bc9928",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 73500
+    },
+    {
+        "referencia": "600412",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared Shimasu 18\" Negro con control",
+        "_id": "5c97b68b48a18330d8bc9929",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 73500
+    },
+    {
+        "referencia": "600819",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared Shimasu 18\" Blanco",
+        "_id": "5c97b1d248a18330d8bc9926",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 67000
+    },
+    {
+        "referencia": "600831",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared Shimasu 18\" Negro",
+        "_id": "5c97b50148a18330d8bc9927",
+        "etiqueta": "Producto",
+        "cantidad": 7,
+        "precio": 67000
+    },
+    {
+        "referencia": "VL155E040116",
+        "categoria": "Vajillas",
+        "nombre": "Vajilla Oasis - 4 puestos",
+        "_id": "5d9a25195ebd3d00048007a1",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 103800
+    },
+    {
+        "referencia": "VL156E040116",
+        "categoria": "Vajillas",
+        "nombre": "Vajilla Amati - 4 puestos",
+        "_id": "5d9a25bd5ebd3d00048007a2",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 103800
+    },
+    {
+        "referencia": "299893583",
+        "categoria": "Cafeteras y hervidoras",
+        "nombre": "Cafetera Eléctrica 10 tazas",
+        "_id": "5d9a2a6c5ebd3d00048007a6",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 74700
+    },
+    {
+        "referencia": "L39135",
+        "categoria": "Baterías de cocina",
+        "nombre": "Batería Antiadherente Aliada 11 piezas Universal L39135",
+        "_id": "5bb2b621c214051450d3bbdc",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 97700
+    },
+    {
+        "referencia": "L39151",
+        "categoria": "Baterías de cocina",
+        "nombre": "Batería antiadherente Aliada - 9 piezas",
+        "_id": "5d9a3a2e5ebd3d00048007ab",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 82071.43
+    },
+    {
+        "referencia": "L39373",
+        "categoria": "Baterías de cocina",
+        "nombre": "Batería aliada ollas - 6 Piezas",
+        "_id": "5cc13e98adc24e1e1007e035",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 71357.14
+    },
+    {
+        "referencia": "L39457",
+        "categoria": "Baterías de cocina",
+        "nombre": "Batería antiadherente Aliada - 7 piezas",
+        "_id": "5cc13f45adc24e1e1007e036",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 67786
+    },
+    {
+        "referencia": "L70015",
+        "categoria": "Licuadoras",
+        "nombre": "LICUADORA PICAHIELO NEGRA",
+        "_id": "5cc00325fdd30c2d84424d04",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 69928.57
+    },
+    {
+        "referencia": "L71120",
+        "categoria": "Torre",
+        "nombre": "Ventilador Torre",
+        "_id": "5caa7fd86e4f5a2174528ffb",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 129772.6
+    },
+    {
+        "referencia": "L72513",
+        "categoria": "Baterías de cocina",
+        "nombre": "Batería 6 Ultra antiadherente - 12 piezas",
+        "_id": "5cba091562f65623a477a27d",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 123500
+    },
+    {
+        "referencia": "BRLY07R00013",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora reversible roja",
+        "_id": "5ca2eb2413571f2bd4a73fb7",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 142857
+    },
+    {
+        "referencia": "BVSTDCDW12B013",
+        "categoria": "Cafeteras y hervidoras",
+        "nombre": "Cafetera negra de 12 tazas",
+        "_id": "5ca2ed5613571f2bd4a73fbb",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 75630
+    },
+    {
+        "referencia": "CKSTGR4219-013",
+        "categoria": "Sandwicheras",
+        "nombre": "Plancha asadora Multiuso ",
+        "_id": "5d9a565804915f0004a4ab11",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 50420
+    },
+    {
+        "referencia": "002499-013-000",
+        "categoria": "Batidoras",
+        "nombre": "Batidora de mano 5 velocidades",
+        "_id": "5d9a57e704915f0004a4ab12",
+        "etiqueta": "Producto",
+        "cantidad": 8,
+        "precio": 58824
+    },
+    {
+        "referencia": "VE7320I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 3 en 1 Comfort Maxx Blanco 18\"",
+        "_id": "5bb72d70f79b7f2fa0c6e725",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 105954
+    },
+    {
+        "referencia": "VF2220I0",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador Airpro pared 50cm Negro",
+        "_id": "5ca1810b134e1033ccb7c76d",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 147680
+    },
+    {
+        "referencia": "VE3142I0",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador Air Protec Maxx Pared Negro",
+        "_id": "5cbcb3702fdde13404be6281",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 76765
+    },
+    {
+        "referencia": "VE3140I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 2 en 1 Air Protec Maxx  Blanco 16\"",
+        "_id": "5cbcb1042fdde13404be627e",
+        "etiqueta": "Producto",
+        "cantidad": 10,
+        "precio": 95900.99
+    },
+    {
+        "referencia": "0501199",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Esmaltada QA con torre GN",
+        "_id": "5cff2a58b794dc05800d8a85",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 125905
+    },
+    {
+        "referencia": "0501213",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Esmaltada QA con torre GN",
+        "_id": "5cff2ba1b794dc05800d8a87",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 125905
+    },
+    {
+        "referencia": "0501125",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Esmaltada QA con torre GP",
+        "_id": "5cff29cdb794dc05800d8a84",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 125905
+    },
+    {
+        "referencia": "VF2253I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador pedestal Airpro 50cm Negro",
+        "_id": "5ca180b7134e1033ccb7c76c",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 188251
+    },
+    {
+        "referencia": "0501212",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Esmaltada QA con torre GP",
+        "_id": "5cff2b21b794dc05800d8a86",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 125905
+    },
+    {
+        "referencia": "00535",
+        "categoria": "Ollas",
+        "nombre": "Juego de 5 ollas aluminio tapa azul 16/24cm (2-2,8-3,5-5,5 y 7L)",
+        "_id": "5d9a5ff804915f0004a4ab17",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 95901
+    },
+    {
+        "referencia": "002612012000",
+        "categoria": "Batidoras",
+        "nombre": "Batidora de inmersión con picatodo blanca",
+        "_id": "5d9a632a04915f0004a4ab18",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 75170
+    },
+    {
+        "referencia": "GCSTBS5813013",
+        "categoria": "Planchas de ropa",
+        "nombre": "Plancha de vapor con base antiadherente azul",
+        "_id": "5caf6e7313e53c31d8cf9332",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 51379
+    },
+    {
+        "referencia": "EM-AVELLANA-T-GN-PL",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 Puestos Plateada con torre GN",
+        "_id": "5cc001ca46270f22f080a8fe",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 131890
+    },
+    {
+        "referencia": "EM-AVELLANA-T-GP-PL",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 Puestos Plateada con torre GP",
+        "_id": "5d9a695c04915f0004a4ab1b",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 131890
+    },
+    {
+        "referencia": "EM-AVELLANA-T-GN-NE",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 Puestos Negra con torre GN",
+        "_id": "5d9a6a9104915f0004a4ab1c",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 131890
+    },
+    {
+        "referencia": "EM-AVELLANA-T-GP-NE",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 Puestos Negra con torre GP",
+        "_id": "5d9a6b4904915f0004a4ab1d",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 131890
+    },
+    {
+        "referencia": "0501164",
+        "categoria": "Estufas con Horno",
+        "nombre": "Estufa con horno Abba 4 puestos Negra Acero Inox Quemador aluminio con torre GN EE",
+        "_id": "5d9a7d6604915f0004a4ab22",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 346667
+    },
+    {
+        "referencia": "VF2260I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador pedestal Airpro XL 60cm Negro",
+        "_id": "5ca17f25134e1033ccb7c76a",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 303221
+    },
+    {
+        "referencia": "3167012000",
+        "categoria": "Extractores de jugos",
+        "nombre": "Extractor de jugos 450w",
+        "_id": "5db3ffb1f481e932847fb7c9",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 123825.21
+    },
+    {
+        "referencia": "LM372156",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora Powermix 2 velocidades blanca",
+        "_id": "5ca177e1134e1033ccb7c763",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 56473
+    },
+    {
+        "referencia": "VE7733I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 3 en 1 Turbo Silence Maxx Gris 18\"",
+        "_id": "5db413a1f481e932847fb7cd",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 137994
+    },
+    {
+        "referencia": "K-MBME300",
+        "categoria": "Batidoras",
+        "nombre": "Batidora mesa negra",
+        "_id": "5db631840f02222ef4685dbc",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 82415
+    },
+    {
+        "referencia": "4751000000",
+        "categoria": "Ollas Arroceras",
+        "nombre": "Arrocera multiusos de 7 tazas negra",
+        "_id": "5db63bf80f02222ef4685dc0",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 69912
+    },
+    {
+        "referencia": "L87320",
+        "categoria": "Sandwicheras",
+        "nombre": "Sandwichera grill 4 puestos",
+        "_id": "5caa9a736e4f5a2174529008",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 66785.71
+    },
+    {
+        "referencia": "3024114916",
+        "categoria": "Sobremesa",
+        "nombre": "EST GAS 4 PT LUJO A.INOX Y B.C Q.AL A.E GN NEGRO",
+        "_id": "5db666360f02222ef4685dcb",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 133263
+    },
+    {
+        "referencia": "3024214923",
+        "categoria": "Sobremesa",
+        "nombre": "EST GAS 4 PT LUJO A.INOX Y B.C Q.AL A.E GN GRIS",
+        "_id": "5db6671e0f02222ef4685dcc",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 133263
+    },
+    {
+        "referencia": "E300A",
+        "categoria": "Cafeteras y hervidoras",
+        "nombre": "Greca Eléctrica 30 Tintos",
+        "_id": "5cba621e62f65623a477a2aa",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 238000
+    },
+    {
+        "referencia": "E1100A",
+        "categoria": "Cafeteras y hervidoras",
+        "nombre": "Greca Eléctrica 60 Tintos",
+        "_id": "5cba626a62f65623a477a2ab",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 255000
+    },
+    {
+        "referencia": "VL175E040116",
+        "categoria": "Vajillas",
+        "nombre": "Vajilla Zulu 4 puestos 16 piezas",
+        "_id": "5e18e5b5efd10a52a439df3b",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 50203
+    },
+    {
+        "referencia": "VL176E040116",
+        "categoria": "Vajillas",
+        "nombre": "Vajilla Dinka 4 puestos 16 piezas",
+        "_id": "5e18e67befd10a52a439df3c",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 50203
+    },
+    {
+        "referencia": "VL180E040116",
+        "categoria": "Vajillas",
+        "nombre": "Vajilla Terracota 4 puestos 16 piezas",
+        "_id": "5e18e6caefd10a52a439df3d",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 50203
+    },
+    {
+        "referencia": "77516",
+        "categoria": "Techo",
+        "nombre": "Ventilador de Techo 56″ Blanco",
+        "_id": "5ca18d6a134e1033ccb7c779",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 89307
+    },
+    {
+        "referencia": "BLSTMPT15013",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora de 8 velocidades con vaso de plástico turquesa",
+        "_id": "5caabb5d9db3f429fc0593a2",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 70000
+    },
+    {
+        "referencia": "GCSTBS5856013",
+        "categoria": "Planchas de ropa",
+        "nombre": "Plancha a Vapor Base Cerámica",
+        "_id": "5e18f3b68698ee35f09c199c",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 59500
+    },
+    {
+        "referencia": "K-WD15KR",
+        "categoria": "Dispensadores de agua",
+        "nombre": "Dispensador de agua K-WD15KR",
+        "_id": "5c9ae3f18dbac8336465f94b",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 389905
+    },
+    {
+        "referencia": "14401220",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Esmaltada QL con torre GP",
+        "_id": "5cff2da8b794dc05800d8a8a",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 110855.99
+    },
+    {
+        "referencia": "14401219",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Esmaltada QL con torre GP",
+        "_id": "5cff2cbeb794dc05800d8a88",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 110855.99
+    },
+    {
+        "referencia": "14401272",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Esmaltada QL con torre GN",
+        "_id": "5cff2e03b794dc05800d8a8b",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 110855.99
+    },
+    {
+        "referencia": "14401271",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Esmaltada QL con torre GN",
+        "_id": "5cff2d15b794dc05800d8a89",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 110855.99
+    },
+    {
+        "referencia": "K-VP100P",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "VENTILADOR K-VP100P",
+        "_id": "5e2b60b099301e2be4d74001",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 89026
+    },
+    {
+        "referencia": "VF2230I0",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador Airpro XL pared 60cm Negro",
+        "_id": "5ca1803e134e1033ccb7c76b",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 235494
+    },
+    {
+        "referencia": "BR-09",
+        "categoria": "Ollas",
+        "nombre": "JUEGO DE ARROCERAS X4 BRILLADAS",
+        "_id": "5e46cfa17d011e1504ebdedb",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 50420
+    },
+    {
+        "referencia": "14403307",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Acero Inox QL con torre GP",
+        "_id": "5c9328df3d38870e60a97279",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 121757
+    },
+    {
+        "referencia": "14403407",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Acero Inox QL con torre GN",
+        "_id": "5c931f793d38870e60a97270",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 121757
+    },
+    {
+        "referencia": "14403308",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Acero Inox QL con torre GP",
+        "_id": "5c9326b13d38870e60a97276",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 121757
+    },
+    {
+        "referencia": "14403408",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negra Acero Inox QL con torre GN",
+        "_id": "5c9315d13d38870e60a9726d",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 121757
+    },
+    {
+        "referencia": "PGBF14-AW",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "VENTILADOR TORNADO DE 14\" PLÁSTICO ",
+        "_id": "5cbcecbf2fdde13404be629b",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 62898
+    },
+    {
+        "referencia": "PGBF16-AW",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "VENTILADOR TORNADO DE 16\" PLÁSTICO ",
+        "_id": "5cbcecfb2fdde13404be629c",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 73176
+    },
+    {
+        "referencia": "PGBF20-AW",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "VENTILADOR TORNADO DE 20\" PLÁSTICO ",
+        "_id": "5cbced2a2fdde13404be629d",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 91391
+    },
+    {
+        "referencia": "RC-CER1.8",
+        "categoria": "Ollas Arroceras",
+        "nombre": "OLLA ARROCERA COLOR EXTERIOR ROJA 1.8 LIBRAS CON VAPORERA",
+        "_id": "5e2b65b199301e2be4d74003",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 58634
+    },
+    {
+        "referencia": "RC-CEN1.8",
+        "categoria": "Ollas Arroceras",
+        "nombre": "OLLA ARROCERA COLOR EXTERIOR NEGRA 1.8 LIBRAS CON VAPORERA",
+        "_id": "5e2b662999301e2be4d74004",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 58634
+    },
+    {
+        "referencia": "ASF-B18BL",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador de Pedestal 18″",
+        "_id": "5e2b71b699301e2be4d74007",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 98979
+    },
+    {
+        "referencia": "MBR-12B18",
+        "categoria": "Coches, sillas y cunas",
+        "nombre": "SILLA MECEDORA VIBRACION MATTINA AZUL L",
+        "_id": "5e3244e38d928c23209acdb1",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 85020
+    },
+    {
+        "referencia": "ACF-130C",
+        "categoria": "Techo",
+        "nombre": "Ventilador de Techo 56″ ACF-130C",
+        "_id": "5cbe185c6ada0d0a70ef8121",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 99076
+    },
+    {
+        "referencia": "299895086",
+        "categoria": "Techo",
+        "nombre": "VENTILADOR ORBITA - LOCO MAXI FLOW 6 ASPAS 3 VEL. 75W",
+        "_id": "5e324a618d928c23209acdb2",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 102440
+    },
+    {
+        "referencia": "299894136",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador pedestal MaxiFLOW 16\" Gris",
+        "_id": "5c991c77fd6729326c1fe902",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 76730
+    },
+    {
+        "referencia": "305-S-GP",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 3 puestos moteada - GP",
+        "_id": "5c9083e090166c333036088d",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 67325
+    },
+    {
+        "referencia": "305-S-GN",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 3 puestos moteada - GN",
+        "_id": "5c98003b48a18330d8bc9940",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 67325
+    },
+    {
+        "referencia": "309-S-GP",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 3 Puestos Gas sin torre - GP",
+        "_id": "5c97fec048a18330d8bc993e",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 73100
+    },
+    {
+        "referencia": "309-S-GN",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 3 Puestos Gas sin torre - GN",
+        "_id": "5c97ff4b48a18330d8bc993f",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 73100
+    },
+    {
+        "referencia": "299891986",
+        "categoria": "Ollas Arroceras",
+        "nombre": "Olla arrocera 2 Libras con vaporera Azul turqueza",
+        "_id": "5ca4ec7f913f9c27acb4b3d1",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 58020.43
+    },
+    {
+        "referencia": "728994094",
+        "categoria": "Ollas a Presión",
+        "nombre": "OLLAS A PRESIÓN Capacidad 11 litros",
+        "_id": "5cc13101adc24e1e1007e030",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 88015.49
+    },
+    {
+        "referencia": "728994378",
+        "categoria": "Ollas Arroceras",
+        "nombre": "Olla arrocera 2 Libras con vaporera Negra",
+        "_id": "5ca4ecec913f9c27acb4b3d2",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 58020.3
+    },
+    {
+        "referencia": "299891439X6",
+        "categoria": "Termos y Portacomidas",
+        "nombre": "Termo bomba 3 Litros exterior en Acero Inoxidable",
+        "_id": "5bb015530f50942f28a35115",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 52697.11
+    },
+    {
+        "referencia": "728994556",
+        "categoria": "Techo",
+        "nombre": "Set x 3 Ventiladores de Techo Industrial Blanco",
+        "_id": "5cbfe7a746270f22f080a8f0",
+        "etiqueta": "Producto",
+        "cantidad": 7,
+        "precio": 92799.53
+    },
+    {
+        "referencia": "728997549",
+        "categoria": "Extractores de jugos",
+        "nombre": "Extractor de jugo 350w Negro",
+        "_id": "5ca2c6f85c251101e8a7fdf1",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 109467.28
+    },
+    {
+        "referencia": "299892156",
+        "categoria": "Ollas",
+        "nombre": "Juego de 5 ollas 14/22 cm",
+        "_id": "5cbfe9ab46270f22f080a8f4",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 53077
+    },
+    {
+        "referencia": "204ISF-911",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "VENTILADOR PARED INDUSTRIAL 30\" 240W NEGRO",
+        "_id": "5e737e361ddc3c1b3c6cc903",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 235106
+    },
+    {
+        "referencia": "204ISF-910",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "VENTILADOR PEDESTAL INDUSTRIAL 30\" 240W NEGRO",
+        "_id": "5e737dc91ddc3c1b3c6cc902",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 274954
+    },
+    {
+        "referencia": "8050900",
+        "categoria": "Calderos",
+        "nombre": "Caldero fundido con tapa 50 cm",
+        "_id": "5e76c14c4775f32a35dd2fff",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 98518
+    },
+    {
+        "referencia": "P3115232",
+        "categoria": "Ollas a Presión",
+        "nombre": "Olla Presión 20.8 Litros Aluminio",
+        "_id": "5e76eb40841e3033063139e3",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 250244
+    },
+    {
+        "referencia": "05255",
+        "categoria": "Neveras",
+        "nombre": "Nevera Frost (Con Escarcha) 187 Litros Roja",
+        "_id": "5e77cf952f866019ccd9b084",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 655843
+    },
+    {
+        "referencia": "05251",
+        "categoria": "Neveras",
+        "nombre": "Nevera Frost (Con Escarcha) 187 Litros Gris",
+        "_id": "5e77d0b42f866019ccd9b085",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 655843
+    },
+    {
+        "referencia": "728997214",
+        "categoria": "Asadores Eléctricos",
+        "nombre": "SARTÉN ELÉCTRICO CUADRADO INTERIOR ANTIADHERENTE",
+        "_id": "5e77e4ac2f866019ccd9b087",
+        "etiqueta": "Producto",
+        "cantidad": 3,
+        "precio": 79962.98
+    },
+    {
+        "referencia": "299895100",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora con vaso de vidrio y picatodo",
+        "_id": "5e7806bb2f866019ccd9b08c",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 100232
+    },
+    {
+        "referencia": "E3100A",
+        "categoria": "Cafeteras y hervidoras",
+        "nombre": "Greca Eléctrica 120 Tintos",
+        "_id": "5cba62c962f65623a477a2ac",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 270000
+    },
+    {
+        "referencia": "E200A",
+        "categoria": "Cafeteras y hervidoras",
+        "nombre": " Greca Eléctrica XX Tintos",
+        "_id": "5e7810282f866019ccd9b090",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 210000
+    },
+    {
+        "referencia": "0344921",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negro Acero Inox QL con torre GP",
+        "_id": "5cd89f5f32236b13f48255de",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 94117.65
+    },
+    {
+        "referencia": "0344922",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negro Acero Inox QL con torre GN",
+        "_id": "5e7ad02f8c150b1ed778e7ad",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 94117.65
+    },
+    {
+        "referencia": "0344931",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Acero Inox QL con torre GP",
+        "_id": "5d6964b28f0bb9000491a5ed",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 94117.65
+    },
+    {
+        "referencia": "0344932",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Acero Inox QL con torre GN",
+        "_id": "5e7ade948c150b1ed778e7b0",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 94117.65
+    },
+    {
+        "referencia": "0030004004925",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negro Acero Inox QA con torre GP",
+        "_id": "5e7add208c150b1ed778e7ae",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 102521.01
+    },
+    {
+        "referencia": "0030004004926",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Negro Acero Inox QA con torre GN",
+        "_id": "5e7addad8c150b1ed778e7af",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 102521.01
+    },
+    {
+        "referencia": "0030004004935",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Gris Acero Inox QA con torre GP",
+        "_id": "5e7adf2c8c150b1ed778e7b1",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 102521.01
+    },
+    {
+        "referencia": "0030004004936",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de Sobremesa 4 puestos Gris Acero Inox QA con torre GN",
+        "_id": "5e7adfa68c150b1ed778e7b2",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 102521.01
+    },
+    {
+        "referencia": "0030004004955",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Rojo Acero Inox QA con torre GP",
+        "_id": "5e7ae0708c150b1ed778e7b3",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 102521.01
+    },
+    {
+        "referencia": "0030004004956",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Rojo Acero Inox QA con torre GN",
+        "_id": "5e7ae0bd8c150b1ed778e7b4",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 102521.01
+    },
+    {
+        "referencia": "0030004004945",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Azul Acero Inox QA con torre GP",
+        "_id": "5e7ae1a18c150b1ed778e7b5",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 102521.01
+    },
+    {
+        "referencia": "0030004004946",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 4 puestos Azul Acero Inox QA con torre GN",
+        "_id": "5e7ae1de8c150b1ed778e7b6",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 102521.01
+    },
+    {
+        "referencia": "BR-42",
+        "categoria": "Ollas",
+        "nombre": "Olla 50x20 49Litros",
+        "_id": "5e7af8d58c150b1ed778e7be",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 70588
+    },
+    {
+        "referencia": "BR-61",
+        "categoria": "Ollas",
+        "nombre": "Juego de Ollas 18/26 Azul Metalizado",
+        "_id": "5e7afad78c150b1ed778e7c0",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 75546
+    },
+    {
+        "referencia": "BR-62",
+        "categoria": "Ollas",
+        "nombre": "Juego de Ollas 18/26 Mora Perlado",
+        "_id": "5e7afb2b8c150b1ed778e7c1",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 75546
+    },
+    {
+        "referencia": "BR-13",
+        "categoria": "Ollas",
+        "nombre": "Juego de Ollas 18/26 Tapa color",
+        "_id": "5e7afb848c150b1ed778e7c2",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 52521
+    },
+    {
+        "referencia": "883262",
+        "categoria": "Organizadores",
+        "nombre": "Mueble organizador x 3 Cajones Wengue Beige",
+        "_id": "5e7b01dd8c150b1ed778e7ce",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 67227
+    },
+    {
+        "referencia": "L80930",
+        "categoria": "Asadores Eléctricos",
+        "nombre": "SARTÉN ELÉCTRICO 30X30 CM",
+        "_id": "5cc0d94927e58d4c581aa4dd",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 86130.26
+    },
+    {
+        "referencia": "L39190",
+        "categoria": "Baterías de cocina",
+        "nombre": "Batería en acero inoxidable Élite Platino - 9 Piezas",
+        "_id": "5cbb784983d4592178c57065",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 221357.14
+    },
+    {
+        "referencia": "L75538",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 18\"",
+        "_id": "5e7b8bae2d16c803bde15975",
+        "etiqueta": "Producto",
+        "cantidad": 7,
+        "precio": 96357.14
+    },
+    {
+        "referencia": "L23100",
+        "categoria": "Ollas a Presión",
+        "nombre": "Olla a Presión 10 Litros Universal L23100",
+        "_id": "5bb05c940f50942f28a35159",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 120000
+    },
+    {
+        "referencia": "L23800",
+        "categoria": "Ollas a Presión",
+        "nombre": "Olla a Presión 8 Litros Universal L23800",
+        "_id": "5bb05d070f50942f28a3515a",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 106000
+    },
+    {
+        "referencia": "L71470",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora deportiva verde",
+        "_id": "5cbc866e4c958536d4255d41",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 51925.71
+    },
+    {
+        "referencia": "L75600",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de piso 20”",
+        "_id": "5cba75f362f65623a477a2bc",
+        "etiqueta": "Producto",
+        "cantidad": 10,
+        "precio": 107071.43
+    },
+    {
+        "referencia": "L88350",
+        "categoria": "Asadores Eléctricos",
+        "nombre": "Asador eléctrico rectangular",
+        "_id": "5e7ba7702d16c803bde15981",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 82472.1
+    },
+    {
+        "referencia": "L89125",
+        "categoria": "Procesadores de alimentos",
+        "nombre": "PROCESADOR MANUAL 3 EN 1",
+        "_id": "5cc0b9af27e58d4c581aa4b5",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 71158.29
+    },
+    {
+        "referencia": "L89302",
+        "categoria": "Hornos",
+        "nombre": "HORNO PROFUNDO 18 LITROS",
+        "_id": "5cc0d5a727e58d4c581aa4da",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 126607.5
+    },
+    {
+        "referencia": "1123893",
+        "categoria": "Baterías de cocina",
+        "nombre": "Bateria 12 piezas DSGN PRIME acero inox",
+        "_id": "5e7eda349fb80b05230c2297",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 231500
+    },
+    {
+        "referencia": "L29400",
+        "categoria": "Ollas a Presión",
+        "nombre": "Olla a presión cierre externo Nova - 4 litros",
+        "_id": "5cbfd608fdd30c2d84424cc3",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 64705.88
+    },
+    {
+        "referencia": "L39343",
+        "categoria": "Baterías de cocina",
+        "nombre": "Juego de ollas Aliada 8 Piezas",
+        "_id": "5e7f040d9fb80b05230c22a8",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 78500
+    },
+    {
+        "referencia": "PGWF18-FA-MP",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared 18\" Blanco",
+        "_id": "5ca11d39dae1193240d79f69",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 80456
+    },
+    {
+        "referencia": "PGWF18-FA-BLACK",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de pared 18\" Negro",
+        "_id": "5ca11db6dae1193240d79f6a",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 76604
+    },
+    {
+        "referencia": "ESTUFA SP-V GAS EE GN PL",
+        "categoria": "Estufas con Horno",
+        "nombre": "ESTUFA con Horno SUPER ECO VIDRIO EE GN PLATA",
+        "_id": "5e7f0b2e9fb80b05230c22ad",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 362021
+    },
+    {
+        "referencia": "44244",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador Pedestal Blanco 18″",
+        "_id": "5cb9f6f962f65623a477a277",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 99076
+    },
+    {
+        "referencia": "44247",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador de Pared 18″",
+        "_id": "5cba54fe62f65623a477a2a1",
+        "etiqueta": "Producto",
+        "cantidad": 7,
+        "precio": 88991
+    },
+    {
+        "referencia": "77819",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora Essential",
+        "_id": "5d005e85b716490587dc797d",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 64622
+    },
+    {
+        "referencia": "L29600",
+        "categoria": "Ollas a Presión",
+        "nombre": "Olla a presión cierre externo Nova - 6 litros",
+        "_id": "5cbfd652fdd30c2d84424cc4",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 69327.73
+    },
+    {
+        "referencia": "L75306",
+        "categoria": "Motores",
+        "nombre": "Motor",
+        "_id": "5cb4a65d290ece497ce4d1c4",
+        "etiqueta": "Repuesto",
+        "cantidad": 2,
+        "precio": 61033.98
+    },
+    {
+        "referencia": "L22210",
+        "categoria": "Ollas a Presión",
+        "nombre": "OLLA PRESION CORONA CI 10L MARCA CORONA",
+        "_id": "5e7f22539fb80b05230c22bd",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 86554.62
+    },
+    {
+        "referencia": "L22330",
+        "categoria": "Ollas a Presión",
+        "nombre": "Olla a presion corona 13 litros",
+        "_id": "5cc7b19acfe4570bac50d018",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 94957.98
+    },
+    {
+        "referencia": "L22801",
+        "categoria": "Ollas a Presión",
+        "nombre": "OLLA PRESION CORONA CI 8L MARCA CORONA",
+        "_id": "5e7fcc6c847dea0470c18f46",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 69327.73
+    },
+    {
+        "referencia": "L62090",
+        "categoria": "Licuadoras",
+        "nombre": "Licuadora Elite turbo max",
+        "_id": "5e7fcd8e847dea0470c18f47",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 142785.71
+    },
+    {
+        "referencia": "L87340",
+        "categoria": "Sandwicheras",
+        "nombre": "SANDUCHERA GRILL MULT 4PTS 3 EN 1",
+        "_id": "5cc0a6fa27e58d4c581aa494",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 95287.77
+    },
+    {
+        "referencia": "299894199",
+        "categoria": "Ollas Arroceras",
+        "nombre": "Olla arrocera 3 Libras Gris",
+        "_id": "5ca4ebc8913f9c27acb4b3cf",
+        "etiqueta": "Producto",
+        "cantidad": 8,
+        "precio": 81785
+    },
+    {
+        "referencia": "VE7335I0",
+        "categoria": "Mesa, pared y piso",
+        "nombre": "Ventilador Comfort Maxx pared negro",
+        "_id": "5e80000f847dea0470c18f5d",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 68264
+    },
+    {
+        "referencia": "VE2310I0",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador pedestal 16\" Blanco tropical ",
+        "_id": "5e82a0562878d8028adf8571",
+        "etiqueta": "Producto",
+        "cantidad": 4,
+        "precio": 67637
+    },
+    {
+        "referencia": "456707",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa Atlantis 4 puestos Negra Esmaltada QL con torre GN",
+        "_id": "5cb408a033e7d62d9ce84501",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 104950
+    },
+    {
+        "referencia": "456706",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa Atlantis 4 puestos Negra Esmaltada QL con torre GP",
+        "_id": "5cb4084e33e7d62d9ce84500",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 104950
+    },
+    {
+        "referencia": "0300100001107",
+        "categoria": "Estufas electricas",
+        "nombre": "Sobremesa 3 Puestos Eléctrica Color moteado Ref. 107",
+        "_id": "5e82d7497c62a305e658f4d2",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 126463
+    },
+    {
+        "referencia": "0385700",
+        "categoria": "Baterías de cocina",
+        "nombre": "BATERÍA 11 PIEZAS ANTIHADERENTE TAPA VIDRIO",
+        "_id": "5e82da027c62a305e658f4d4",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 150538
+    },
+    {
+        "referencia": "k-v40n",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 3 en 1 NEGRO",
+        "_id": "5e82dd607c62a305e658f4d6",
+        "etiqueta": "Producto",
+        "cantidad": 6,
+        "precio": 52001
+    },
+    {
+        "referencia": "K-WD15C",
+        "categoria": "Dispensadores de agua",
+        "nombre": "Dispensador Agua KALLEY G K-WD15C\"B",
+        "_id": "5cbcbc792fdde13404be6283",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 238642
+    },
+    {
+        "referencia": "K-V40A",
+        "categoria": "Pedestal y Multiusos",
+        "nombre": "Ventilador 3 en 1 KALLEY K-V40 AZUL",
+        "_id": "5e82f9617c62a305e658f4fa",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 53774
+    },
+    {
+        "referencia": "CKSTRCMS14R",
+        "categoria": "Ollas Arroceras",
+        "nombre": "Arrocera multiusos de 7 tazas roja",
+        "_id": "5cafadbf13e53c31d8cf933b",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 82184
+    },
+    {
+        "referencia": "BR-02",
+        "categoria": "Ollas",
+        "nombre": "Juego de calderos de 18 a 26",
+        "_id": "5e83760f3076b4032632c44e",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 50420
+    },
+    {
+        "referencia": "BR-57",
+        "categoria": "Ollas",
+        "nombre": "Juego de ollas con aro de 12 a 30",
+        "_id": "5e8377763076b4032632c44f",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 75630
+    },
+    {
+        "referencia": "V1008LN",
+        "categoria": "Vajillas",
+        "nombre": "Vajilla 4 puestos - 20 piezas ondas lineas negras y rojas",
+        "_id": "5e837bff3076b4032632c453",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 50131
+    },
+    {
+        "referencia": "1139",
+        "categoria": "Ollas",
+        "nombre": "Olla esmaltada con tapa 26 cm",
+        "_id": "5e839a3c3076b4032632c464",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 59040
+    },
+    {
+        "referencia": "1902",
+        "categoria": "Ollas",
+        "nombre": "Olla esmaltada con tapa 24 cm",
+        "_id": "5e839c0e3076b4032632c466",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 50716
+    },
+    {
+        "referencia": "0030001000022",
+        "categoria": "Gabinetes",
+        "nombre": "GABINETE 4 puestos NEGRO Con chapa",
+        "_id": "5ecb1e26636f7ed00b99a6fd",
+        "etiqueta": "Producto",
+        "cantidad": 5,
+        "precio": 57142.86
+    },
+    {
+        "referencia": "0030001000032",
+        "categoria": "Gabinetes",
+        "nombre": "GABINETE 4 puestos GRIS Chapa",
+        "_id": "5ecb1c44636f7ed00b99a6fc",
+        "etiqueta": "Producto",
+        "cantidad": 9,
+        "precio": 57142.86
+    },
+    {
+        "referencia": "L23000",
+        "categoria": "Ollas a Presión",
+        "nombre": "Olla a Presión 13 Litros Universal L23000",
+        "_id": "5bb05bfd0f50942f28a35158",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 145341
+    },
+    {
+        "referencia": "L25600",
+        "categoria": "Ollas a Presión",
+        "nombre": "Olla a Presión 6 Litros cierre externo Universal L25600",
+        "_id": "5bb29531c214051450d3bbca",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 62949.47
+    },
+    {
+        "referencia": "0030004002921",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 2 puestos Acero Inox QL GP Negra",
+        "_id": "5ef0d6bc0d9126001706f424",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 66386.55
+    },
+    {
+        "referencia": "0030004002931",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 2 puestos Acero Inox QL GP Gris",
+        "_id": "5ef0d72b0d9126001706f425",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 66386.55
+    },
+    {
+        "referencia": "0030004002951",
+        "categoria": "Sobremesa",
+        "nombre": "Estufa de sobremesa 2 puestos Acero Inox QL GP Roja",
+        "_id": "5ef0d77d0d9126001706f426",
+        "etiqueta": "Producto",
+        "cantidad": 1,
+        "precio": 66386.55
+    },
+    {
+        "referencia": "0030005004935",
+        "categoria": "Estufas con Gabinete",
+        "nombre": "Estufa de Gabinete 4 puestos Gris Acero Inox QA con torre GP",
+        "_id": "5eefa36fe6db3500171b7f57",
+        "etiqueta": "Producto",
+        "cantidad": 2,
+        "precio": 205882.35
+    }
+];
+        const cuerpo = document.getElementById('cuerpo');
+
+        let htmlContent = ''
+        productos.forEach(producto => htmlContent+= `
+            <tr>
+                <th scope="row">${ producto.cantidad }</th>
+                <td>${ producto.referencia }</td>
+                <td>${ producto.nombre }</td>
+                <td>${ parseInt( producto.precio * 1.40 / 10000 ) * 10000 }</td>
+            </tr>
+        `)
+
+        cuerpo.innerHTML = htmlContent;
+    </script>
+  </body>
+</html>
